@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Order is important! -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="dest/elements.html">
+  <script src="dest/elements.min.js"></script>
+</head>
+<body>
+
+<my-element name="Compilation Success!"></my-element>
+
+<p>
+  If you see <em>Welcome Compilation Success!</em> above, you've compiled your elements correctly.
+  Check out the console for some log statements.
+</p>
+<button id="change">Change Name</button>
+
+<script>
+  document.getElementById('change').addEventListener('click', function() {
+    document.querySelector('my-element').name = 'Another Name';
+  });
+</script>
+
+</body>
+</html>

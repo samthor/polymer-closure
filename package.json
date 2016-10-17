@@ -1,0 +1,15 @@
+{
+  "name": "polymer-closure",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "bower install; gulp"
+  },
+  "author": "Closure Compiler Authors",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "google-closure-compiler-js": "^20160916.0.0",
+    "gulp": "^3.9.1",
+    "gulp-crisper": "^1.1.0",
+    "gulp-vulcanize": "^6.1.0"
+  }
+}

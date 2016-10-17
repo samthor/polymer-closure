@@ -1,0 +1,63 @@
+
+<script>
+/** @polymerBehavior */
+window.HighlightBehavior = {
+
+  properties: {
+    isHighlighted: {
+      type: Boolean,
+      value: false,
+      notify: true,
+      observer: '_highlightChanged'
+    }
+  },
+
+  listeners: {
+    click: '_toggleHighlight'
+  },
+
+  created: function() {
+    console.log('Highlighting for ', this, 'enabled!');
+  },
+
+  _toggleHighlight: function() {
+    this.isHighlighted = !this.isHighlighted;
+  },
+
+  _highlightChanged: function(value) {
+    this.toggleClass('highlighted', value);
+  }
+
+};
+</script>
+
+<dom-module id="my-element">
+  <template>
+    <div id="holder"></div>
+  </template>
+  <script>
+Polymer({
+  is: 'my-element',
+  behaviors: [window.HighlightBehavior],
+  properties: {
+    name: {type: String, observer: 'nameChanged_'},
+  },
+
+  attached: function() {
+    const div = /** HTMLDivElement */ this.$.holder;
+    div.textContent = 'Welcome ' + (this.name || 'User');
+  },
+
+  nameChanged_: function(/** number */ newValue) {
+    console.info('The name was changed', newValue.toLowerCase());  // Intentionally an error!
+    // Note that the above type is 'specified as number', but it should be 'string'.
+
+    // Obviously, in a real Polymer element, you should use templates with binding.
+    const div = /** HTMLDivElement */ this.$.holder;
+    div.textContent = `Who is ${this.name || 'User'}?`;
+  },
+});
+  </script>
+</dom-module>
+
+
