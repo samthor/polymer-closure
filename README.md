@@ -1,7 +1,7 @@
-This is a demo project for [Polymer & the Closure Compiler](TODO).
+This is a demo project for [Polymer & the Closure Compiler](https://goo.gl/vPYfay).
 If you'd like to undertake it for your own projects, be sure to read the blogpost!
 
-The project showcases compiling a Polymer 1.x project with Closure, giving you minified, compiled, and transpiled JavaScript inside your Polymer elements 🎉
+The project showcases compiling a Polymer 1.x project with Google's Closure Compiler, giving you minified, compiled, and transpiled JavaScript inside your Polymer elements 🎉
 
 This is not a Google product.
 It is available under an [Apache 2 LICENSE](LICENSE).
