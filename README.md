@@ -1,4 +1,4 @@
-This is a demo project for [Polymer & the Closure Compiler](https://goo.gl/vPYfay).
+This is a demo project for [Polymer & the Closure Compiler](https://medium.com/@samthor/polymer-the-closure-compiler-e80dd249d9d7).
 If you'd like to undertake it for your own projects, be sure to read the blogpost!
 
 The project showcases compiling a Polymer 1.x project with Google's Closure Compiler, giving you minified, compiled, and transpiled JavaScript inside your Polymer elements 🎉
